@@ -12,9 +12,9 @@ namespace assessment_task
 {
     public partial class easyLevel : Form
     {
+        //the numbers that are assigned to the pictures on easy level
         List<int> picNumbers = new List<int> () { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10};
         
-
 
         public easyLevel()
         {

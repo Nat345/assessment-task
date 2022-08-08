@@ -5,6 +5,9 @@ namespace assessment_task
         public welcome()
         {
             InitializeComponent();
+
+            //we say hello
+            //nat was here
         }
 
         private void button2_Click(object sender, EventArgs e)

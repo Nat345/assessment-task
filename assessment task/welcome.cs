@@ -21,8 +21,8 @@ namespace assessment_task
 
             else
             {
-                Properties.Settings.Default.User = textBox1.Text;
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.User = textBox1.Text;
+                //Properties.Settings.Default.Save();
 
                 //saves name
 

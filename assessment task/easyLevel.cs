@@ -40,5 +40,20 @@ namespace assessment_task
         {
 
         }
+
+        private void easyLevel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //I'm trying to make a click event where the picture appears when its clicked 
+            //pictureBox1.Image = Properties.Resources.;
+            
+            
+
+            
+        }
     }
 }

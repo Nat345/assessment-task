@@ -35,11 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.highScoreDisplay1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.highScoreDisplay2 = new System.Windows.Forms.Label();
+            this.highScoreDisplay3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // easybutton
@@ -95,7 +97,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(999, 217);
+            this.label2.Location = new System.Drawing.Point(988, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(264, 62);
             this.label2.TabIndex = 7;
@@ -124,16 +126,16 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "best experience in fullscreen!";
             // 
-            // label5
+            // highScoreDisplay1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Gold;
-            this.label5.Location = new System.Drawing.Point(1011, 294);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 46);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "high score 1";
+            this.highScoreDisplay1.AutoSize = true;
+            this.highScoreDisplay1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.highScoreDisplay1.ForeColor = System.Drawing.Color.Gold;
+            this.highScoreDisplay1.Location = new System.Drawing.Point(1024, 335);
+            this.highScoreDisplay1.Name = "highScoreDisplay1";
+            this.highScoreDisplay1.Size = new System.Drawing.Size(202, 46);
+            this.highScoreDisplay1.TabIndex = 10;
+            this.highScoreDisplay1.Text = "high score 1";
             // 
             // label6
             // 
@@ -179,17 +181,41 @@
             this.label9.Text = "How Many Stars?";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // highScoreDisplay2
+            // 
+            this.highScoreDisplay2.AutoSize = true;
+            this.highScoreDisplay2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.highScoreDisplay2.ForeColor = System.Drawing.Color.Gold;
+            this.highScoreDisplay2.Location = new System.Drawing.Point(1024, 406);
+            this.highScoreDisplay2.Name = "highScoreDisplay2";
+            this.highScoreDisplay2.Size = new System.Drawing.Size(202, 46);
+            this.highScoreDisplay2.TabIndex = 15;
+            this.highScoreDisplay2.Text = "high score 2";
+            // 
+            // highScoreDisplay3
+            // 
+            this.highScoreDisplay3.AutoSize = true;
+            this.highScoreDisplay3.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.highScoreDisplay3.ForeColor = System.Drawing.Color.Gold;
+            this.highScoreDisplay3.Location = new System.Drawing.Point(1024, 475);
+            this.highScoreDisplay3.Name = "highScoreDisplay3";
+            this.highScoreDisplay3.Size = new System.Drawing.Size(202, 46);
+            this.highScoreDisplay3.TabIndex = 16;
+            this.highScoreDisplay3.Text = "high score 3";
+            // 
             // welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.highScoreDisplay3);
+            this.Controls.Add(this.highScoreDisplay2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.highScoreDisplay1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -212,10 +238,12 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Label label5;
+        private Label highScoreDisplay1;
         private Label label6;
         private Label label7;
         private Label label8;
         private Label label9;
+        private Label highScoreDisplay2;
+        private Label highScoreDisplay3;
     }
 }

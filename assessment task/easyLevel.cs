@@ -14,30 +14,12 @@ namespace assessment_task
     {
         //the numbers that are assigned to the pictures on easy level
         List<PictureBox> picNumbers = new List<PictureBox>();
+
         
         public easyLevel()
         {
             InitializeComponent();
-            picNumbers.Add(pictureBox1);
-            picNumbers.Add(pictureBox2);
-            picNumbers.Add(pictureBox3);
-            picNumbers.Add(pictureBox4);
-            picNumbers.Add(pictureBox5);
-            picNumbers.Add(pictureBox6);
-            picNumbers.Add(pictureBox7);
-            picNumbers.Add(pictureBox8);
-            picNumbers.Add(pictureBox9);
-            picNumbers.Add(pictureBox10);
-            picNumbers.Add(pictureBox11);
-            picNumbers.Add(pictureBox12);
-            picNumbers.Add(pictureBox13);
-            picNumbers.Add(pictureBox14);
-            picNumbers.Add(pictureBox15);
-            picNumbers.Add(pictureBox16);
-            picNumbers.Add(pictureBox17);
-            picNumbers.Add(pictureBox18);
-            picNumbers.Add(pictureBox19);
-            picNumbers.Add(pictureBox20);
+            //loadPictures();
         }
 
         private void TimerEvent(object sender, EventArgs e)
@@ -45,15 +27,8 @@ namespace assessment_task
 
         }
 
-        private void loadPictures ()
-        {
+        //private void loadPictures()
 
-        }
-
-        private void checkPictures (PictureBox x, PictureBox y)
-        {
-
-        }
 
         private void restartGame ()
         {
@@ -67,9 +42,7 @@ namespace assessment_task
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //I'm trying to make a click event where the picture appears when its clicked 
             pictureBox1.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number1.png");
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -107,6 +80,65 @@ namespace assessment_task
             pictureBox8.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number8.png");
         }
 
-        
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            pictureBox7.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number7.png");
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            pictureBox6.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number6.png");
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            pictureBox15.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star5.png");
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            pictureBox14.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star4.png");
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            pictureBox13.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star3.png");
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            pictureBox12.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star2.png");
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            pictureBox11.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star1.png");
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            pictureBox20.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star10.png");
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            pictureBox19.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star9.png");
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            pictureBox18.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star8.png");
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            pictureBox17.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star7.png");
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            pictureBox16.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star6.png");
+        }
+
     }
 }

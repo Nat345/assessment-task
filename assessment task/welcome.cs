@@ -53,9 +53,9 @@ namespace assessment_task
 
             else
             { 
-                Properties.Settings.Default.User = label1.Text;
-                Properties.Settings.Default.Save();
-                //saves name 
+                //Properties.Settings.Default.User = label1.Text;
+                //Properties.Settings.Default.Save();
+                //(supposed to) save name 
 
                 hardLevel f3 = new hardLevel();
                 f3.ShowDialog();
@@ -80,6 +80,11 @@ namespace assessment_task
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void highScoreDisplay3_Click(object sender, EventArgs e)
         {
 
         }

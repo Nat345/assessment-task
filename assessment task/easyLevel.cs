@@ -14,12 +14,13 @@ namespace assessment_task
     {
         //the numbers that are assigned to the pictures on easy level
         List<PictureBox> picNumbers = new List<PictureBox>();
+        bool gameStatus = true;
 
         
         public easyLevel()
         {
             InitializeComponent();
-            //loadPictures();
+            loadPictures();
         }
 
         private void TimerEvent(object sender, EventArgs e)
@@ -27,11 +28,23 @@ namespace assessment_task
 
         }
 
-        //private void loadPictures()
+        private void loadPictures()
+        {
+            //picNumbers.Clear(); (was recommended so idk)
+        }
 
 
         private void restartGame ()
         {
+            if (gameStatus == false)
+            {            
+                //
+                MessageBox.Show("click below to start again");    
+                easyLevel f4 = new easyLevel();
+                f4.ShowDialog();
+            
+            }
+            
 
         }
 
@@ -40,104 +53,106 @@ namespace assessment_task
 
         }
 
+        //here onward is just the pictures in the tiles 
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number1.png");
+            pictureBox1.Image = Properties.Resources.number1;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number2.png");
+            pictureBox2.Image = Properties.Resources.number2;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            pictureBox3.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number3.png");
+            pictureBox3.Image = Properties.Resources.number3;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            pictureBox4.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number4.png");
+            pictureBox4.Image = Properties.Resources.number4;
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            pictureBox5.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number5.png");
+            pictureBox5.Image = Properties.Resources.number5;
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            pictureBox10.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number10.png");
+            pictureBox10.Image = Properties.Resources.number6;
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            pictureBox9.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number9.png");
+            pictureBox9.Image = Properties.Resources.number7;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            pictureBox8.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number8.png");
+            pictureBox8.Image = Properties.Resources.number8;
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            pictureBox7.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number7.png");
+            pictureBox7.Image = Properties.Resources.number9;
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            pictureBox6.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\number6.png");
+            pictureBox6.Image = Properties.Resources.number10;
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            pictureBox15.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star5.png");
+            pictureBox15.Image = Properties.Resources.star1;
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            pictureBox14.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star4.png");
+            pictureBox14.Image = Properties.Resources.star2;
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            pictureBox13.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star3.png");
+            pictureBox13.Image = Properties.Resources.star3;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            pictureBox12.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star2.png");
+            pictureBox12.Image = Properties.Resources.star4;
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            pictureBox11.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star1.png");
+            pictureBox11.Image = Properties.Resources.star5;
         }
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
-            pictureBox20.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star10.png");
+            pictureBox20.Image = Properties.Resources.star6;
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
-            pictureBox19.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star9.png");
+            pictureBox19.Image = Properties.Resources.star7;
         }
 
         private void pictureBox18_Click(object sender, EventArgs e)
         {
-            pictureBox18.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star8.png");
+            pictureBox18.Image = Properties.Resources.star8;
         }
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-            pictureBox17.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star7.png");
+            pictureBox17.Image = Properties.Resources.star9;
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            pictureBox16.Image = Image.FromFile(@"C:\Users\Natalie\source\repos\New folder\assessment task\star6.png");
+            pictureBox16.Image = Properties.Resources.star10;
         }
 
     }

@@ -117,4 +117,74 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="easybg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\easybg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hardbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\number9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twinkle twinkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twinkle twinkle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

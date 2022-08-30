@@ -12,6 +12,8 @@ namespace assessment_task
 {
     public partial class easyLevel : Form
     {
+        //applied to the drop down menu of 'How to Win?'
+        private bool isCollapsed;
         //the numbers that are assigned to the pictures on easy level
         List<PictureBox> picNumbers = new List<PictureBox>();
         bool gameStatus = true;
@@ -163,5 +165,38 @@ namespace assessment_task
             pictureBox16.Image = Properties.Resources.star10;
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDropDown_Click(object sender, EventArgs e)
+        {
+            //drop down menu
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //dropdown menu
+            if (isCollapsed)
+            {
+                panelDropDown.Height += 10;
+                if (panelDropDown.Size == panelDropDown.MaximumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                panelDropDown.Height -= 10;
+                if (panelDropDown.Size == panelDropDown.MinimumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
     }
 }

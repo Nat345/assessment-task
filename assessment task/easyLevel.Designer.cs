@@ -31,7 +31,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,6 +51,14 @@
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonDropDown = new System.Windows.Forms.Button();
+            this.panelDropDown = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,12 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            this.panelDropDown.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.TimerEvent);
             // 
             // pictureBox1
             // 
@@ -299,12 +302,104 @@
             this.pictureBox20.TabStop = false;
             this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1055, 292);
+            this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(219, 238);
+            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(219, 63);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(219, 238);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
+            // buttonDropDown
+            // 
+            this.buttonDropDown.BackColor = System.Drawing.Color.LightSlateGray;
+            this.buttonDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDropDown.FlatAppearance.BorderSize = 0;
+            this.buttonDropDown.Font = new System.Drawing.Font("Ink Free", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDropDown.Location = new System.Drawing.Point(0, 0);
+            this.buttonDropDown.Name = "buttonDropDown";
+            this.buttonDropDown.Size = new System.Drawing.Size(219, 64);
+            this.buttonDropDown.TabIndex = 22;
+            this.buttonDropDown.Text = "How to Win?";
+            this.buttonDropDown.UseVisualStyleBackColor = false;
+            this.buttonDropDown.Click += new System.EventHandler(this.buttonDropDown_Click);
+            // 
+            // panelDropDown
+            // 
+            this.panelDropDown.Controls.Add(this.textBox4);
+            this.panelDropDown.Controls.Add(this.textBox3);
+            this.panelDropDown.Controls.Add(this.textBox2);
+            this.panelDropDown.Controls.Add(this.textBox1);
+            this.panelDropDown.Controls.Add(this.buttonDropDown);
+            this.panelDropDown.Location = new System.Drawing.Point(1055, 292);
+            this.panelDropDown.MaximumSize = new System.Drawing.Size(219, 238);
+            this.panelDropDown.MinimumSize = new System.Drawing.Size(219, 63);
+            this.panelDropDown.Name = "panelDropDown";
+            this.panelDropDown.Size = new System.Drawing.Size(219, 238);
+            this.panelDropDown.TabIndex = 22;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox4.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(0, 185);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(219, 53);
+            this.textBox4.TabIndex = 26;
+            this.textBox4.Text = "4. If not, well done and repeat steps 3-4 until all cards match";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(0, 134);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(219, 52);
+            this.textBox3.TabIndex = 25;
+            this.textBox3.Text = "3. If the picture and number card don\'t match, 5secs will be added";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(0, 97);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(219, 38);
+            this.textBox2.TabIndex = 24;
+            this.textBox2.Text = "2. Press on another card";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(0, 61);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(219, 37);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.Text = "1. Press on a card";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // easyLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::assessment_task.Properties.Resources.easybg;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.panelDropDown);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox18);
@@ -348,12 +443,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            this.panelDropDown.ResumeLayout(false);
+            this.panelDropDown.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
@@ -374,5 +470,13 @@
         private PictureBox pictureBox18;
         private PictureBox pictureBox19;
         private PictureBox pictureBox20;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private Button buttonDropDown;
+        private Panel panelDropDown;
+        private TextBox textBox1;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

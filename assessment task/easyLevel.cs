@@ -15,6 +15,8 @@ namespace assessment_task
         //the numbers that are assigned to the pictures on easy level
         List<PictureBox> picNumbers = new List<PictureBox>();
         bool gameStatus = true;
+        string firstChoice = "";
+        string secondChoice = "";
 
         
         public easyLevel()
@@ -42,11 +44,17 @@ namespace assessment_task
                 MessageBox.Show("click below to start again");    
                 easyLevel f4 = new easyLevel();
                 f4.ShowDialog();
-            
             }
             
 
         }
+
+
+        private void slay()
+        {
+
+        }
+
 
         private void easyLevel_Load(object sender, EventArgs e)
         {

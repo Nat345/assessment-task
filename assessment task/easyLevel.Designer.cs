@@ -59,6 +59,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.stopWatch1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelSec = new System.Windows.Forms.Label();
+            this.labelMilSec = new System.Windows.Forms.Label();
+            this.labelMin = new System.Windows.Forms.Label();
+            this.buttonRestart = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.panelDropDown.SuspendLayout();
+            this.stopWatch1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -308,7 +317,7 @@
             this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(219, 238);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(219, 63);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(219, 238);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(219, 63);
             this.flowLayoutPanel2.TabIndex = 21;
             // 
             // buttonDropDown
@@ -321,7 +330,7 @@
             this.buttonDropDown.Name = "buttonDropDown";
             this.buttonDropDown.Size = new System.Drawing.Size(219, 64);
             this.buttonDropDown.TabIndex = 22;
-            this.buttonDropDown.Text = "How to Win?";
+            this.buttonDropDown.Text = "↓ How to Win? ↓";
             this.buttonDropDown.UseVisualStyleBackColor = false;
             this.buttonDropDown.Click += new System.EventHandler(this.buttonDropDown_Click);
             // 
@@ -336,7 +345,7 @@
             this.panelDropDown.MaximumSize = new System.Drawing.Size(219, 238);
             this.panelDropDown.MinimumSize = new System.Drawing.Size(219, 63);
             this.panelDropDown.Name = "panelDropDown";
-            this.panelDropDown.Size = new System.Drawing.Size(219, 238);
+            this.panelDropDown.Size = new System.Drawing.Size(219, 63);
             this.panelDropDown.TabIndex = 22;
             // 
             // textBox4
@@ -392,6 +401,94 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(0, 0);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // stopWatch1
+            // 
+            this.stopWatch1.BackColor = System.Drawing.Color.SlateGray;
+            this.stopWatch1.Controls.Add(this.groupBox1);
+            this.stopWatch1.Controls.Add(this.labelSec);
+            this.stopWatch1.Controls.Add(this.labelMilSec);
+            this.stopWatch1.Controls.Add(this.labelMin);
+            this.stopWatch1.Controls.Add(this.buttonRestart);
+            this.stopWatch1.Controls.Add(this.buttonStart);
+            this.stopWatch1.Location = new System.Drawing.Point(1055, 353);
+            this.stopWatch1.Name = "stopWatch1";
+            this.stopWatch1.Size = new System.Drawing.Size(219, 118);
+            this.stopWatch1.TabIndex = 24;
+            this.stopWatch1.Paint += new System.Windows.Forms.PaintEventHandler(this.stopWatch1_Paint);
+            // 
+            // labelSec
+            // 
+            this.labelSec.AutoSize = true;
+            this.labelSec.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelSec.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelSec.Location = new System.Drawing.Point(9, 0);
+            this.labelSec.Name = "labelSec";
+            this.labelSec.Size = new System.Drawing.Size(47, 34);
+            this.labelSec.TabIndex = 26;
+            this.labelSec.Text = "00";
+            this.labelSec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelMilSec
+            // 
+            this.labelMilSec.AutoSize = true;
+            this.labelMilSec.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMilSec.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMilSec.Location = new System.Drawing.Point(62, 0);
+            this.labelMilSec.Name = "labelMilSec";
+            this.labelMilSec.Size = new System.Drawing.Size(47, 34);
+            this.labelMilSec.TabIndex = 27;
+            this.labelMilSec.Text = "00";
+            this.labelMilSec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelMin
+            // 
+            this.labelMin.AutoSize = true;
+            this.labelMin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMin.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMin.Location = new System.Drawing.Point(115, 0);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(47, 34);
+            this.labelMin.TabIndex = 25;
+            this.labelMin.Text = "00";
+            this.labelMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // buttonRestart
+            // 
+            this.buttonRestart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRestart.Location = new System.Drawing.Point(3, 37);
+            this.buttonRestart.Name = "buttonRestart";
+            this.buttonRestart.Size = new System.Drawing.Size(80, 30);
+            this.buttonRestart.TabIndex = 28;
+            this.buttonRestart.Text = "Restart";
+            this.buttonRestart.UseVisualStyleBackColor = true;
+            this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
+            // 
+            // buttonStart
+            // 
+            this.buttonStart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonStart.Location = new System.Drawing.Point(89, 37);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(80, 30);
+            this.buttonStart.TabIndex = 25;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // easyLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -420,6 +517,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.stopWatch1);
             this.Name = "easyLevel";
             this.Text = "Level Easy";
             this.Load += new System.EventHandler(this.easyLevel_Load);
@@ -445,6 +543,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.panelDropDown.ResumeLayout(false);
             this.panelDropDown.PerformLayout();
+            this.stopWatch1.ResumeLayout(false);
+            this.stopWatch1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +578,13 @@
         private TextBox textBox3;
         private TextBox textBox2;
         private System.Windows.Forms.Timer timer1;
+        private GroupBox groupBox1;
+        private FlowLayoutPanel stopWatch1;
+        private Label labelSec;
+        private Label labelMilSec;
+        private Label labelMin;
+        private Button buttonRestart;
+        private Button buttonStart;
+        private System.Windows.Forms.Timer timer2;
     }
 }

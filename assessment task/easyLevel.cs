@@ -12,6 +12,10 @@ namespace assessment_task
 {
     public partial class easyLevel : Form
     {
+        //the variables used for the timer2 - the stopwatch in the rocket on the right side
+        int timeCs, timeSec, timeMin;
+        //for the start button of the stopwatch
+        bool isActive;
         //applied to the drop down menu of 'How to Win?'
         private bool isCollapsed;
         //the numbers that are assigned to the pictures on easy level
@@ -52,15 +56,27 @@ namespace assessment_task
         }
 
 
-        private void slay()
-        {
-
-        }
-
-
         private void easyLevel_Load(object sender, EventArgs e)
         {
+            ResetTime();
+        }
 
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            isActive = false;
+            ResetTime(); 
+        }
+
+        private void ResetTime()
+        {
+            timeCs = 0;
+            timeSec = 0;
+            timeMin = 0;
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            isActive = true;
         }
 
         //here onward is just the pictures in the tiles 
@@ -197,6 +213,17 @@ namespace assessment_task
                     isCollapsed = true;
                 }
             }
+        }
+
+
+        private void stopWatch1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

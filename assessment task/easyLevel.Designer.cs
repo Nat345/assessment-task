@@ -61,11 +61,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.stopWatch1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelSec = new System.Windows.Forms.Label();
             this.labelMilSec = new System.Windows.Forms.Label();
-            this.labelMin = new System.Windows.Forms.Label();
             this.buttonRestart = new System.Windows.Forms.Button();
+            this.labelSec = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.labelMin = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -412,59 +412,36 @@
             // 
             // stopWatch1
             // 
+            this.stopWatch1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stopWatch1.BackColor = System.Drawing.Color.SlateGray;
             this.stopWatch1.Controls.Add(this.groupBox1);
-            this.stopWatch1.Controls.Add(this.labelSec);
             this.stopWatch1.Controls.Add(this.labelMilSec);
-            this.stopWatch1.Controls.Add(this.labelMin);
             this.stopWatch1.Controls.Add(this.buttonRestart);
+            this.stopWatch1.Controls.Add(this.labelSec);
             this.stopWatch1.Controls.Add(this.buttonStart);
+            this.stopWatch1.Controls.Add(this.labelMin);
             this.stopWatch1.Location = new System.Drawing.Point(1055, 353);
             this.stopWatch1.Name = "stopWatch1";
             this.stopWatch1.Size = new System.Drawing.Size(219, 118);
             this.stopWatch1.TabIndex = 24;
             this.stopWatch1.Paint += new System.Windows.Forms.PaintEventHandler(this.stopWatch1_Paint);
             // 
-            // labelSec
-            // 
-            this.labelSec.AutoSize = true;
-            this.labelSec.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelSec.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSec.Location = new System.Drawing.Point(9, 0);
-            this.labelSec.Name = "labelSec";
-            this.labelSec.Size = new System.Drawing.Size(47, 34);
-            this.labelSec.TabIndex = 26;
-            this.labelSec.Text = "00";
-            this.labelSec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // labelMilSec
             // 
             this.labelMilSec.AutoSize = true;
-            this.labelMilSec.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMilSec.BackColor = System.Drawing.Color.SlateGray;
             this.labelMilSec.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMilSec.Location = new System.Drawing.Point(62, 0);
+            this.labelMilSec.Location = new System.Drawing.Point(9, 0);
             this.labelMilSec.Name = "labelMilSec";
             this.labelMilSec.Size = new System.Drawing.Size(47, 34);
             this.labelMilSec.TabIndex = 27;
             this.labelMilSec.Text = "00";
             this.labelMilSec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelMin
-            // 
-            this.labelMin.AutoSize = true;
-            this.labelMin.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMin.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMin.Location = new System.Drawing.Point(115, 0);
-            this.labelMin.Name = "labelMin";
-            this.labelMin.Size = new System.Drawing.Size(47, 34);
-            this.labelMin.TabIndex = 25;
-            this.labelMin.Text = "00";
-            this.labelMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // buttonRestart
             // 
             this.buttonRestart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRestart.Location = new System.Drawing.Point(3, 37);
+            this.buttonRestart.Location = new System.Drawing.Point(62, 3);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(80, 30);
             this.buttonRestart.TabIndex = 28;
@@ -472,16 +449,40 @@
             this.buttonRestart.UseVisualStyleBackColor = true;
             this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
             // 
+            // labelSec
+            // 
+            this.labelSec.AutoSize = true;
+            this.labelSec.BackColor = System.Drawing.Color.SlateGray;
+            this.labelSec.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelSec.Location = new System.Drawing.Point(148, 0);
+            this.labelSec.Name = "labelSec";
+            this.labelSec.Size = new System.Drawing.Size(47, 34);
+            this.labelSec.TabIndex = 26;
+            this.labelSec.Text = "00";
+            this.labelSec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStart.Location = new System.Drawing.Point(89, 37);
+            this.buttonStart.Location = new System.Drawing.Point(3, 39);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(80, 30);
             this.buttonStart.TabIndex = 25;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // labelMin
+            // 
+            this.labelMin.AutoSize = true;
+            this.labelMin.BackColor = System.Drawing.Color.SlateGray;
+            this.labelMin.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMin.Location = new System.Drawing.Point(89, 36);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(47, 34);
+            this.labelMin.TabIndex = 25;
+            this.labelMin.Text = "00";
+            this.labelMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // timer2
             // 

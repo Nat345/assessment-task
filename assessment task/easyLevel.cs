@@ -58,7 +58,9 @@ namespace assessment_task
 
         private void easyLevel_Load(object sender, EventArgs e)
         {
+            //timer is set to zero (not functioning) when the form is loaded
             ResetTime();
+            isActive = false;
         }
 
         private void buttonRestart_Click(object sender, EventArgs e)
@@ -223,7 +225,32 @@ namespace assessment_task
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            //when the stopwatch is counting and shows the calculations of which label to alter
+            if (isActive)
+            {
+                timeCs++;
 
+                if(timeCs  >= 100)
+                {
+                    timeSec++;
+                    timeCs = 0;
+
+                    if (timeSec >= 60)
+                    {
+                        timeMin++;
+                        timeSec = 0;
+                    }
+                }
+            }
+            //add this in to the screen element of the easy level design
+            DrawTime();
+        }
+
+        private void DrawTime()
+        {
+            labelMilSec.Text = String.Format("{0:00}", timeCs);
+            labelSec.Text = String.Format ("{0:00}", timeSec);  
+            labelMin.Text = String.Format("{0:00}", timeMin);
         }
     }
 }

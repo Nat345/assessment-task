@@ -66,6 +66,7 @@
             this.labelMin = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -415,7 +416,7 @@
             // buttonRestart
             // 
             this.buttonRestart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRestart.Location = new System.Drawing.Point(120, 71);
+            this.buttonRestart.Location = new System.Drawing.Point(120, 59);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(80, 30);
             this.buttonRestart.TabIndex = 28;
@@ -438,7 +439,7 @@
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStart.Location = new System.Drawing.Point(19, 71);
+            this.buttonStart.Location = new System.Drawing.Point(19, 59);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(80, 30);
             this.buttonStart.TabIndex = 25;
@@ -474,8 +475,16 @@
             this.panel1.Controls.Add(this.buttonStart);
             this.panel1.Location = new System.Drawing.Point(1055, 353);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 115);
+            this.panel1.Size = new System.Drawing.Size(219, 107);
             this.panel1.TabIndex = 25;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateGray;
+            this.panel2.Location = new System.Drawing.Point(1055, 460);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(219, 70);
+            this.panel2.TabIndex = 26;
             // 
             // easyLevel
             // 
@@ -483,6 +492,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::assessment_task.Properties.Resources.easybg;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelDropDown);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox16);
@@ -573,5 +583,6 @@
         private Button buttonStart;
         private System.Windows.Forms.Timer timer2;
         private Panel panel1;
+        private Panel panel2;
     }
 }

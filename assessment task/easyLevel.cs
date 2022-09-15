@@ -199,7 +199,7 @@ namespace assessment_task
             //dropdown menu
             if (isCollapsed)
             {
-                //how fast the drop down menu is giong to drop down and back up
+                //how long it takes for the drop down menu to drop down and come back up
                 panelDropDown.Height += 30;
                 if (panelDropDown.Size == panelDropDown.MaximumSize)
                 {

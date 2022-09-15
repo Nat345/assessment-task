@@ -199,7 +199,8 @@ namespace assessment_task
             //dropdown menu
             if (isCollapsed)
             {
-                panelDropDown.Height += 10;
+                //how fast the drop down menu is giong to drop down and back up
+                panelDropDown.Height += 30;
                 if (panelDropDown.Size == panelDropDown.MaximumSize)
                 {
                     timer1.Stop();
@@ -208,7 +209,7 @@ namespace assessment_task
             }
             else
             {
-                panelDropDown.Height -= 10;
+                panelDropDown.Height -= 30;
                 if (panelDropDown.Size == panelDropDown.MinimumSize)
                 {
                     timer1.Stop();

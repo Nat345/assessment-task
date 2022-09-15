@@ -477,7 +477,7 @@
             this.labelMin.AutoSize = true;
             this.labelMin.BackColor = System.Drawing.Color.SlateGray;
             this.labelMin.Font = new System.Drawing.Font("Ink Free", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelMin.Location = new System.Drawing.Point(89, 36);
+            this.labelMin.Location = new System.Drawing.Point(88, 26);
             this.labelMin.Name = "labelMin";
             this.labelMin.Size = new System.Drawing.Size(47, 34);
             this.labelMin.TabIndex = 25;

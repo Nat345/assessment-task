@@ -18,41 +18,62 @@ namespace assessment_task
         bool isActive;
         //applied to the drop down menu of 'How to Win?'
         private bool isCollapsed;
-        //the numbers that are assigned to the pictures on easy level
-        List<PictureBox> picNumbers = new List<PictureBox>();
-        bool gameStatus = true;
-        string firstChoice = "";
-        string secondChoice = "";
+        //variable to see if game is over 
+        bool gameOver = false;
+        //variables to see if the things match 
+        string firstChoice;
+        string secondChoice;
+        PictureBox picA;
+        PictureBox picB;
+        //keep track of how many mismatches (for calculation of score at the end)
+        int mismatchCounter;
 
-        
+
         public easyLevel()
         {
             InitializeComponent();
-            loadPictures();
+            
+            
         }
 
-        private void TimerEvent(object sender, EventArgs e)
+        private void onPicClick()
         {
+            if (gameOver  == true)
+            {
+                //don't register any new attempts to click stuff 
+                return;
+            }
 
+            
+            else
+            {
+                checkMatch(picA, picB);
+            }
         }
-
-        private void loadPictures()
-        {
-            //picNumbers.Clear(); (was recommended so idk)
-        }
-
 
         private void restartGame ()
         {
-            if (gameStatus == false)
+            if (gameOver == true)
             {            
-                //
                 MessageBox.Show("click below to start again");    
-                easyLevel f4 = new easyLevel();
+                welcome f4 = new welcome();
                 f4.ShowDialog();
             }
             
+        }
 
+        private void checkMatch(PictureBox A, PictureBox B)
+        {
+            if (firstChoice == secondChoice)
+            {
+                //continue game 
+            }
+            else
+            {
+                //make them go back to blue colour 
+                //
+
+            }
         }
 
 
@@ -66,7 +87,9 @@ namespace assessment_task
         private void buttonRestart_Click(object sender, EventArgs e)
         {
             isActive = false;
-            ResetTime(); 
+            ResetTime();
+            gameOver = true;
+            restartGame();
         }
 
         private void ResetTime()
@@ -76,6 +99,11 @@ namespace assessment_task
             timeMin = 0;
         }
 
+        private void TimerEvent(object sender, EventArgs e)
+        {
+
+        }        
+        
         private void buttonStart_Click(object sender, EventArgs e)
         {
             isActive = true;
@@ -145,6 +173,13 @@ namespace assessment_task
             labelSec.Text = String.Format ("{0:00}", timeSec);  
             labelMin.Text = String.Format("{0:00}", timeMin);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
         //here onward is just the pictures in the tiles 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -247,10 +282,7 @@ namespace assessment_task
             pictureBox16.Image = Properties.Resources.star10;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
     }

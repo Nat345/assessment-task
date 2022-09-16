@@ -73,6 +73,7 @@ namespace assessment_task
             else
             {
                 //make them go back to blue colour 
+                //and
                 mismatchCounter = mismatchCounter + 1;
 
             }

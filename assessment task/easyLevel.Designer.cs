@@ -492,7 +492,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::assessment_task.Properties.Resources.easybg;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelDropDown);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox16);
@@ -516,6 +515,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "easyLevel";
             this.Text = "Level Easy";
             this.Load += new System.EventHandler(this.easyLevel_Load);

@@ -80,7 +80,71 @@ namespace assessment_task
         {
             isActive = true;
         }
+        private void buttonDropDown_Click(object sender, EventArgs e)
+        {
+            //drop down menu
+            timer1.Start();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //dropdown menu
+            if (isCollapsed)
+            {
+                //how long it takes for the drop down menu to drop down and come back up
+                panelDropDown.Height += 30;
+                if (panelDropDown.Size == panelDropDown.MaximumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                panelDropDown.Height -= 30;
+                if (panelDropDown.Size == panelDropDown.MinimumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
+
+
+        private void stopWatch1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            //when the stopwatch is counting and shows the calculations of which label to alter
+            if (isActive)
+            {
+                timeCs++;
+
+                if(timeCs  >= 100)
+                {
+                    timeSec++;
+                    timeCs = 0;
+
+                    if (timeSec >= 60)
+                    {
+                        timeMin++;
+                        timeSec = 0;
+                    }
+                }
+            }
+            //add this in to the screen element of the easy level design
+            DrawTime();
+        }
+
+        private void DrawTime()
+        {
+            labelMilSec.Text = String.Format("{0:00}", timeCs);
+            labelSec.Text = String.Format ("{0:00}", timeSec);  
+            labelMin.Text = String.Format("{0:00}", timeMin);
+        }
         //here onward is just the pictures in the tiles 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -188,70 +252,6 @@ namespace assessment_task
 
         }
 
-        private void buttonDropDown_Click(object sender, EventArgs e)
-        {
-            //drop down menu
-            timer1.Start();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //dropdown menu
-            if (isCollapsed)
-            {
-                //how long it takes for the drop down menu to drop down and come back up
-                panelDropDown.Height += 30;
-                if (panelDropDown.Size == panelDropDown.MaximumSize)
-                {
-                    timer1.Stop();
-                    isCollapsed = false;
-                }
-            }
-            else
-            {
-                panelDropDown.Height -= 30;
-                if (panelDropDown.Size == panelDropDown.MinimumSize)
-                {
-                    timer1.Stop();
-                    isCollapsed = true;
-                }
-            }
-        }
-
-
-        private void stopWatch1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            //when the stopwatch is counting and shows the calculations of which label to alter
-            if (isActive)
-            {
-                timeCs++;
-
-                if(timeCs  >= 100)
-                {
-                    timeSec++;
-                    timeCs = 0;
-
-                    if (timeSec >= 60)
-                    {
-                        timeMin++;
-                        timeSec = 0;
-                    }
-                }
-            }
-            //add this in to the screen element of the easy level design
-            DrawTime();
-        }
-
-        private void DrawTime()
-        {
-            labelMilSec.Text = String.Format("{0:00}", timeCs);
-            labelSec.Text = String.Format ("{0:00}", timeSec);  
-            labelMin.Text = String.Format("{0:00}", timeMin);
-        }
+        
     }
 }

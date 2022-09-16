@@ -31,9 +31,7 @@ namespace assessment_task
 
         public easyLevel()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();            
         }
 
         private void onPicClick()
@@ -42,6 +40,10 @@ namespace assessment_task
             {
                 //don't register any new attempts to click stuff 
                 return;
+            }
+            else if ()
+            {
+
             }
 
             
@@ -71,7 +73,7 @@ namespace assessment_task
             else
             {
                 //make them go back to blue colour 
-                //
+                mismatchCounter = mismatchCounter + 1;
 
             }
         }

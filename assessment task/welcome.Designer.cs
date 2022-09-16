@@ -80,11 +80,12 @@
             this.highScoreDisplay1.BackColor = System.Drawing.Color.RoyalBlue;
             this.highScoreDisplay1.Font = new System.Drawing.Font("Ink Free", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.highScoreDisplay1.ForeColor = System.Drawing.Color.White;
-            this.highScoreDisplay1.Location = new System.Drawing.Point(1050, 381);
+            this.highScoreDisplay1.Location = new System.Drawing.Point(1063, 384);
             this.highScoreDisplay1.Name = "highScoreDisplay1";
-            this.highScoreDisplay1.Size = new System.Drawing.Size(222, 37);
+            this.highScoreDisplay1.Size = new System.Drawing.Size(195, 37);
             this.highScoreDisplay1.TabIndex = 10;
-            this.highScoreDisplay1.Text = "   high score 1   ";
+            this.highScoreDisplay1.Text = " high score 1  ";
+            this.highScoreDisplay1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -108,11 +109,11 @@
             this.highScoreDisplay2.BackColor = System.Drawing.Color.RoyalBlue;
             this.highScoreDisplay2.Font = new System.Drawing.Font("Ink Free", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.highScoreDisplay2.ForeColor = System.Drawing.Color.White;
-            this.highScoreDisplay2.Location = new System.Drawing.Point(1042, 429);
+            this.highScoreDisplay2.Location = new System.Drawing.Point(1063, 422);
             this.highScoreDisplay2.Name = "highScoreDisplay2";
-            this.highScoreDisplay2.Size = new System.Drawing.Size(230, 37);
+            this.highScoreDisplay2.Size = new System.Drawing.Size(194, 37);
             this.highScoreDisplay2.TabIndex = 15;
-            this.highScoreDisplay2.Text = "   high score 2   ";
+            this.highScoreDisplay2.Text = " high score 2 ";
             // 
             // highScoreDisplay3
             // 
@@ -120,7 +121,7 @@
             this.highScoreDisplay3.BackColor = System.Drawing.Color.RoyalBlue;
             this.highScoreDisplay3.Font = new System.Drawing.Font("Ink Free", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.highScoreDisplay3.ForeColor = System.Drawing.Color.White;
-            this.highScoreDisplay3.Location = new System.Drawing.Point(1065, 466);
+            this.highScoreDisplay3.Location = new System.Drawing.Point(1063, 460);
             this.highScoreDisplay3.Name = "highScoreDisplay3";
             this.highScoreDisplay3.Size = new System.Drawing.Size(194, 37);
             this.highScoreDisplay3.TabIndex = 16;

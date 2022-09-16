@@ -56,7 +56,7 @@ namespace assessment_task
             if (gameOver == true)
             {            
                 MessageBox.Show("click below to start again");    
-                welcome f4 = new welcome();
+                easyLevel f4 = new easyLevel();
                 f4.ShowDialog();
             }
             

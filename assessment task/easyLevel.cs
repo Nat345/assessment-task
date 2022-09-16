@@ -41,10 +41,7 @@ namespace assessment_task
                 //don't register any new attempts to click stuff 
                 return;
             }
-            else if ()
-            {
 
-            }
 
             
             else
@@ -90,9 +87,22 @@ namespace assessment_task
         private void buttonRestart_Click(object sender, EventArgs e)
         {
             isActive = false;
-            ResetTime();
-            gameOver = true;
-            restartGame();
+            string message = "Are you sure you want to restart?";
+            string title = "Restart game";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                isActive = false;
+                ResetTime();
+                gameOver = true;
+                restartGame();
+            }
+            else
+            {
+                isActive = true;
+            }
+            
         }
 
         private void ResetTime()
@@ -110,6 +120,23 @@ namespace assessment_task
         private void buttonStart_Click(object sender, EventArgs e)
         {
             isActive = true;
+        }
+
+        private void buttonQuit_Click(object sender, EventArgs e)
+        {
+            isActive = false;
+            string message = "Are you sure you want to quit?";
+            string title = "Quit game";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                isActive = true;
+            }
         }
         private void buttonDropDown_Click(object sender, EventArgs e)
         {

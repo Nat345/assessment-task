@@ -67,6 +67,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -416,7 +417,7 @@
             // buttonRestart
             // 
             this.buttonRestart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRestart.Location = new System.Drawing.Point(120, 59);
+            this.buttonRestart.Location = new System.Drawing.Point(69, 59);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(80, 30);
             this.buttonRestart.TabIndex = 28;
@@ -439,9 +440,9 @@
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStart.Location = new System.Drawing.Point(19, 59);
+            this.buttonStart.Location = new System.Drawing.Point(8, 59);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(80, 30);
+            this.buttonStart.Size = new System.Drawing.Size(58, 30);
             this.buttonStart.TabIndex = 25;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -468,6 +469,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Controls.Add(this.buttonQuit);
             this.panel1.Controls.Add(this.labelMilSec);
             this.panel1.Controls.Add(this.labelSec);
             this.panel1.Controls.Add(this.buttonRestart);
@@ -485,6 +487,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(219, 70);
             this.panel2.TabIndex = 26;
+            // 
+            // buttonQuit
+            // 
+            this.buttonQuit.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonQuit.Location = new System.Drawing.Point(153, 59);
+            this.buttonQuit.Name = "buttonQuit";
+            this.buttonQuit.Size = new System.Drawing.Size(58, 30);
+            this.buttonQuit.TabIndex = 29;
+            this.buttonQuit.Text = "Quit";
+            this.buttonQuit.UseVisualStyleBackColor = true;
+            this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
             // 
             // easyLevel
             // 
@@ -584,5 +597,6 @@
         private System.Windows.Forms.Timer timer2;
         private Panel panel1;
         private Panel panel2;
+        private Button buttonQuit;
     }
 }

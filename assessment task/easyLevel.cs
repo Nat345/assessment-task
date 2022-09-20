@@ -26,7 +26,7 @@ namespace assessment_task
         PictureBox picA;
         PictureBox picB;
         //keep track of how many mismatches (for calculation of score at the end)
-        int mismatchCounter;
+        int mismatchCounter = 0;
 
 
         public easyLevel()
@@ -41,8 +41,6 @@ namespace assessment_task
                 //don't register any new attempts to click stuff 
                 return;
             }
-
-
             
             else
             {
@@ -70,7 +68,7 @@ namespace assessment_task
             else
             {
                 //make them go back to blue colour 
-                //and
+                //and 
                 mismatchCounter = mismatchCounter + 1;
 
             }

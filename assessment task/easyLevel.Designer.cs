@@ -66,8 +66,8 @@
             this.labelMin = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.buttonQuit = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -480,14 +480,6 @@
             this.panel1.Size = new System.Drawing.Size(219, 107);
             this.panel1.TabIndex = 25;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Location = new System.Drawing.Point(1055, 460);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 70);
-            this.panel2.TabIndex = 26;
-            // 
             // buttonQuit
             // 
             this.buttonQuit.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -498,6 +490,14 @@
             this.buttonQuit.Text = "Quit";
             this.buttonQuit.UseVisualStyleBackColor = true;
             this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateGray;
+            this.panel2.Location = new System.Drawing.Point(1055, 460);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(219, 70);
+            this.panel2.TabIndex = 26;
             // 
             // easyLevel
             // 

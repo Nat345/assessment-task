@@ -37,6 +37,26 @@ namespace assessment_task
             InitializeComponent();            
         }
 
+        private static IEnumerable<Image> images
+        {
+            get
+            {
+                return new Image[]
+                {
+                    Properties.Resources.star1,
+                    Properties.Resources.star2,
+                    Properties.Resources.star3,
+                    Properties.Resources.star4,
+                    Properties.Resources.star5,
+                    Properties.Resources.star6,
+                    Properties.Resources.star7,
+                    Properties.Resources.star8,
+                    Properties.Resources.star9,
+                    Properties.Resources.star10,
+                };
+            }
+        }
+
         private void onPicClick(object sender, EventArgs e)
         {
             if (gameOver  == true)
@@ -50,7 +70,7 @@ namespace assessment_task
                 picA = sender as PictureBox;
                 if (picA.Tag != null && picA.Image == null)
                 {
-                    //assigning the pictures to the iamge resource
+                    //assigning the pictures to the image resource
                     picA.Image = Image.FromFile("stars/" + (string)picA.Tag + ".png");
                     firstChoice = (string)picA.Tag;
                 }
@@ -59,10 +79,9 @@ namespace assessment_task
             else if(secondChoice == null)
             {
                 picB = sender as PictureBox;
-
                 if (picB.Tag != null && picB.Image == null)
                 {
-                    picB.Image = Image.FromFile("stars/" + (string)picB.Tag + ".png");
+                    picB.Image = Image.FromFile("stars/" + (string)picB.Tag +".png");
                     secondChoice = (string)picB.Tag;
                 }
             }

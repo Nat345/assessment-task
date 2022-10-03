@@ -523,7 +523,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "easyLevel";
-            this.Text = "Level Easy";
+            this.Text = "b ";
             this.Load += new System.EventHandler(this.easyLevel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -5,9 +5,6 @@ namespace assessment_task
         public welcome()
         {
             InitializeComponent();
-
-            //we say hello
-            //nat was here
         }
 
         private void saveUser()

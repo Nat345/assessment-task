@@ -18,15 +18,18 @@ namespace assessment_task
         bool isActive;
         //applied to the drop down menu of 'How to Win?'
         private bool isCollapsed;
-        //variable to see if game is over 
-        bool gameOver = false;
+        List<int> numbers = new List<int> {1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10};
         //variables to see if the things match 
         string firstChoice;
         string secondChoice;
+        //keep track of how many mismatches (for calculation of score at the end)
+        int mismatchCounter;
+        List<PictureBox> pictures = new List<PictureBox>();
         PictureBox picA;
         PictureBox picB;
-        //keep track of how many mismatches (for calculation of score at the end)
-        int mismatchCounter = 0;
+        //variable to see if game is over 
+        bool gameOver = false;
+
 
 
         public easyLevel()
@@ -34,29 +37,57 @@ namespace assessment_task
             InitializeComponent();            
         }
 
-        private void onPicClick()
+        private void onPicClick(object sender, EventArgs e)
         {
             if (gameOver  == true)
             {
                 //don't register any new attempts to click stuff 
                 return;
             }
+
+            if (firstChoice == null)
+            {
+                picA = sender as PictureBox;
+                if (picA.Tag != null && picA.Image == null)
+                {
+                    //assigning the pictures to the iamge resource
+                    picA.Image = Image.FromFile("stars/" + (string)picA.Tag + ".png");
+                    firstChoice = (string)picA.Tag;
+                }
+            }
             
+            else if(secondChoice == null)
+            {
+                picB = sender as PictureBox;
+
+                if (picB.Tag != null && picB.Image == null)
+                {
+                    picB.Image = Image.FromFile("stars/" + (string)picB.Tag + ".png");
+                    secondChoice = (string)picB.Tag;
+                }
+            }
             else
             {
                 checkMatch(picA, picB);
             }
         }
 
-        private void restartGame ()
+        private void restartGame()
         {
-            if (gameOver == true)
-            {            
-                MessageBox.Show("click below to start again");    
-                easyLevel f4 = new easyLevel();
-                f4.ShowDialog();
+            //randomising the list of numbers that are assigned to the pictures
+            var randomList = numbers.OrderBy(x => Guid.NewGuid()).ToList();
+            //assigning the random list to the numbers
+            numbers = randomList;
+
+            for (int i = 0; i< pictures.Count; i++)
+            {
+                pictures[i].Image = null;
+                pictures[i].Tag = numbers[i].ToString();
             }
-            
+
+            mismatchCounter = 0; 
+            MismatchedTimes.Text = "Mismatched: " + mismatchCounter;
+            gameOver = false;
         }
 
         private void checkMatch(PictureBox A, PictureBox B)
@@ -64,19 +95,50 @@ namespace assessment_task
             if (firstChoice == secondChoice)
             {
                 //continue game 
+                A.Tag = null;
+                B.Tag = null;
             }
             else
             {
                 //make them go back to blue colour 
                 //and 
-                mismatchCounter = mismatchCounter + 1;
+                mismatchCounter++;
+                MismatchedTimes.Text = "Mismatched: " + mismatchCounter;
 
+            }
+
+            //resetting the assigned choices when it is matched or not matched
+            firstChoice = null;
+            secondChoice = null;
+
+            //more resetting
+            //the variable, then item, in the collection
+            foreach (PictureBox pics in pictures.ToList())
+            {
+                if (pics.Tag != null)
+                {
+                    pics.Image = null;
+                }
+            }
+
+            //checking that the items have been solved
+            if (pictures.All(o => o.Tag == pictures[0].Tag))
+            {
+                GameOver("Good Job! You win!");
             }
         }
 
 
-        private void easyLevel_Load(object sender, EventArgs e)
+        private void GameOver(string msg)
         {
+            isActive = false;
+            gameOver = true;
+            endGame f4 = new endGame();
+            f4.ShowDialog();
+        }
+
+        private void easyLevel_Load(object sender, EventArgs e)
+        {  
             //timer is set to zero (not functioning) when the form is loaded
             ResetTime();
             isActive = false;
@@ -100,7 +162,6 @@ namespace assessment_task
             {
                 isActive = true;
             }
-            
         }
 
         private void ResetTime()
@@ -167,11 +228,6 @@ namespace assessment_task
         }
 
 
-        private void stopWatch1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             //when the stopwatch is counting and shows the calculations of which label to alter
@@ -201,117 +257,6 @@ namespace assessment_task
             labelSec.Text = String.Format ("{0:00}", timeSec);  
             labelMin.Text = String.Format("{0:00}", timeMin);
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        //here onward is just the pictures in the tiles 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Properties.Resources.number1;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            pictureBox2.Image = Properties.Resources.number2;
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            pictureBox3.Image = Properties.Resources.number3;
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            pictureBox4.Image = Properties.Resources.number4;
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            pictureBox5.Image = Properties.Resources.number5;
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            pictureBox10.Image = Properties.Resources.number6;
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            pictureBox9.Image = Properties.Resources.number7;
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            pictureBox8.Image = Properties.Resources.number8;
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            pictureBox7.Image = Properties.Resources.number9;
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            pictureBox6.Image = Properties.Resources.number10;
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            pictureBox15.Image = Properties.Resources.star1;
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            pictureBox14.Image = Properties.Resources.star2;
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            pictureBox13.Image = Properties.Resources.star3;
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            pictureBox12.Image = Properties.Resources.star4;
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            pictureBox11.Image = Properties.Resources.star5;
-        }
-
-        private void pictureBox20_Click(object sender, EventArgs e)
-        {
-            pictureBox20.Image = Properties.Resources.star6;
-        }
-
-        private void pictureBox19_Click(object sender, EventArgs e)
-        {
-            pictureBox19.Image = Properties.Resources.star7;
-        }
-
-        private void pictureBox18_Click(object sender, EventArgs e)
-        {
-            pictureBox18.Image = Properties.Resources.star8;
-        }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-            pictureBox17.Image = Properties.Resources.star9;
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-            pictureBox16.Image = Properties.Resources.star10;
-        }
-
-        
-
         
     }
 }

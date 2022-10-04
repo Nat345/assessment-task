@@ -53,11 +53,60 @@ namespace assessment_task
                     Properties.Resources.star8,
                     Properties.Resources.star9,
                     Properties.Resources.star10,
+                    Properties.Resources.number1,
+                    Properties.Resources.number2,
+                    Properties.Resources.number3,
+                    Properties.Resources.number4,
+                    Properties.Resources.number5,
+                    Properties.Resources.number6,
+                    Properties.Resources.number7,
+                    Properties.Resources.number8,
+                    Properties.Resources.number9,
+                    Properties.Resources.number10,
+
                 };
             }
         }
 
-        private void onPicClick(object sender, EventArgs e)
+        //trying to get the picture boxes to load when the program starts (doesn't work)
+        private void LoadPictures()
+        {
+            int leftPos = 100;
+            int topPos = 100;
+            int rows = 0;
+
+            for (int i = 0; i < 20; i++)
+            {
+                PictureBox newPic = new PictureBox();
+                newPic.Height = 500;
+                newPic.Width = 500;
+                newPic.BackColor = Color.SlateGray;
+                newPic.BorderStyle = BorderStyle.Fixed3D;
+                newPic.SizeMode = PictureBoxSizeMode.StretchImage;
+                newPic.Click += onPic_Click;
+                pictures.Add(newPic);
+
+                if (rows < 5)
+                {
+                    rows++;
+                    newPic.Left = leftPos;
+                    newPic.Top = topPos;
+                    this.Controls.Add(newPic);
+                    leftPos = leftPos + 100;
+                }
+
+                if (rows == 5)
+                {
+                    leftPos = 100;
+                    topPos += 270;
+                    rows = 0;
+                }
+            }
+
+            restartGame();
+        }
+
+        private void onPic_Click(object sender, EventArgs e)
         {
             if (gameOver  == true)
             {
@@ -176,6 +225,27 @@ namespace assessment_task
                 ResetTime();
                 gameOver = true;
                 restartGame();
+                pictureBox1.Image = null;
+                pictureBox2.Image = null;
+                pictureBox3.Image = null;
+                pictureBox4.Image = null;
+                pictureBox5.Image = null;
+                pictureBox6.Image = null;
+                pictureBox7.Image = null;
+                pictureBox8.Image = null;
+                pictureBox9.Image = null;
+                pictureBox10.Image = null;
+                pictureBox11.Image = null;
+                pictureBox12.Image = null;
+                pictureBox13.Image = null;
+                pictureBox14.Image = null;
+                pictureBox15.Image = null;
+                pictureBox16.Image = null;
+                pictureBox17.Image = null;
+                pictureBox18.Image = null;
+                pictureBox19.Image = null;
+                pictureBox20.Image = null;
+
             }
             else
             {
@@ -198,6 +268,26 @@ namespace assessment_task
         private void buttonStart_Click(object sender, EventArgs e)
         {
             isActive = true;
+            pictureBox1.Image = Properties.Resources.question;
+            pictureBox2.Image = Properties.Resources.question;
+            pictureBox3.Image = Properties.Resources.question;
+            pictureBox4.Image = Properties.Resources.question;
+            pictureBox5.Image = Properties.Resources.question;
+            pictureBox6.Image = Properties.Resources.question;
+            pictureBox7.Image = Properties.Resources.question;
+            pictureBox8.Image = Properties.Resources.question;
+            pictureBox9.Image = Properties.Resources.question;
+            pictureBox10.Image = Properties.Resources.question;
+            pictureBox11.Image = Properties.Resources.question;
+            pictureBox12.Image = Properties.Resources.question;
+            pictureBox13.Image = Properties.Resources.question;
+            pictureBox14.Image = Properties.Resources.question;
+            pictureBox15.Image = Properties.Resources.question;
+            pictureBox16.Image = Properties.Resources.question;
+            pictureBox17.Image = Properties.Resources.question;
+            pictureBox18.Image = Properties.Resources.question;
+            pictureBox19.Image = Properties.Resources.question;
+            pictureBox20.Image = Properties.Resources.question;
         }
 
         private void buttonQuit_Click(object sender, EventArgs e)
@@ -246,6 +336,10 @@ namespace assessment_task
             }
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void timer2_Tick(object sender, EventArgs e)
         {

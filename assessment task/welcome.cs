@@ -7,17 +7,15 @@ namespace assessment_task
             InitializeComponent();
         }
 
-        private void saveUser()
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             string x = textBox1.Text;
             if (string.IsNullOrEmpty(x))
             {
-                MessageBox.Show("enter a name >:(");
+                string message = "Enter a Name.";
+                string title = "Name";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Exclamation);
 
             }
 
@@ -33,11 +31,6 @@ namespace assessment_task
 
                 //opens easy level 
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -63,32 +56,6 @@ namespace assessment_task
                 f3.ShowDialog();
                 //opens hard level
             }
-
-        }
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void highScoreDisplay3_Click(object sender, EventArgs e)
-        {
 
         }
     }

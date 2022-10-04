@@ -336,11 +336,6 @@ namespace assessment_task
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             //when the stopwatch is counting and shows the calculations of which label to alter

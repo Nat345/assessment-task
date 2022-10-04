@@ -7,11 +7,13 @@ namespace assessment_task
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void easyButton_Click(object sender, EventArgs e)
         {
+            //messagebox that appears when you click the easy level button
             string x = textBox1.Text;
             if (string.IsNullOrEmpty(x))
             {
+                //asks user to enter a name because the textbox is empty
                 string message = "Enter a Name.";
                 string title = "Name";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
@@ -40,7 +42,11 @@ namespace assessment_task
             string x = textBox1.Text;
             if (string.IsNullOrEmpty(x))
             {
-                MessageBox.Show("enter a name >:(");
+                //asks user to enter a name because the textbox is empty
+                string message = "Enter a Name.";
+                string title = "Name";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Exclamation);
 
             }
 
@@ -58,5 +64,6 @@ namespace assessment_task
             }
 
         }
+
     }
 }

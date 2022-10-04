@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.easybutton = new System.Windows.Forms.Button();
+            this.easyButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.hardbutton = new System.Windows.Forms.Button();
             this.highScoreDisplay1 = new System.Windows.Forms.Label();
@@ -38,18 +38,18 @@
             this.highScoreDisplay3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // easybutton
+            // easyButton
             // 
-            this.easybutton.BackColor = System.Drawing.Color.Transparent;
-            this.easybutton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.easybutton.ForeColor = System.Drawing.Color.Indigo;
-            this.easybutton.Location = new System.Drawing.Point(434, 598);
-            this.easybutton.Name = "easybutton";
-            this.easybutton.Size = new System.Drawing.Size(100, 50);
-            this.easybutton.TabIndex = 2;
-            this.easybutton.Text = "Easy";
-            this.easybutton.UseVisualStyleBackColor = false;
-            this.easybutton.Click += new System.EventHandler(this.button2_Click);
+            this.easyButton.BackColor = System.Drawing.Color.Transparent;
+            this.easyButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.easyButton.ForeColor = System.Drawing.Color.Indigo;
+            this.easyButton.Location = new System.Drawing.Point(434, 598);
+            this.easyButton.Name = "easyButton";
+            this.easyButton.Size = new System.Drawing.Size(100, 50);
+            this.easyButton.TabIndex = 2;
+            this.easyButton.Text = "Easy";
+            this.easyButton.UseVisualStyleBackColor = false;
+            this.easyButton.Click += new System.EventHandler(this.easyButton_Click);
             // 
             // textBox1
             // 
@@ -140,7 +140,7 @@
             this.Controls.Add(this.highScoreDisplay1);
             this.Controls.Add(this.hardbutton);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.easybutton);
+            this.Controls.Add(this.easyButton);
             this.Name = "welcome";
             this.Text = "Welcome";
             this.ResumeLayout(false);
@@ -149,7 +149,7 @@
         }
 
         #endregion
-        private Button easybutton;
+        private Button easyButton;
         private TextBox textBox1;
         private Button hardbutton;
         private Label highScoreDisplay1;

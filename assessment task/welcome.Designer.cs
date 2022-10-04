@@ -59,7 +59,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(353, 38);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // hardbutton
             // 
@@ -126,7 +125,6 @@
             this.highScoreDisplay3.Size = new System.Drawing.Size(194, 37);
             this.highScoreDisplay3.TabIndex = 16;
             this.highScoreDisplay3.Text = " high score 3 ";
-            this.highScoreDisplay3.Click += new System.EventHandler(this.highScoreDisplay3_Click);
             // 
             // welcome
             // 
